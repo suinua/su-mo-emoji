@@ -1,0 +1,385 @@
+.body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.text{
+    text-align: left;
+    margin-left: 370px
+}
+@media screen and (max-width: 1000px) {
+    .text{
+        text-align: left;
+        margin-left: 60px
+    }
+}
+.Title{
+    font-size:60px;
+    opacity: 0.6;
+    border-radius: 10px;
+    box-shadow: 0 0 8px gray;
+}
+@media screen and (max-width: 1000px) {
+.Title{
+    font-size:30px;
+    opacity: 0.6;
+    border-radius: 10px;
+    box-shadow: 0 0 8px gray;
+}
+}
+.SubTitle{
+    font-size:20px;
+    border-left :solid 5px orange;
+    border-right :solid 5px orange;
+    width:50%;
+    height:10%;
+    color:orange;
+    border-radius: 100px 100px 100px 100px;
+    border-bottom: solid 3px orange;
+    border-top: solid 3px orange;
+    box-shadow: 0 0 8px gray;
+}
+@media screen and (max-width: 1000px) {
+.SubTitle{
+    font-size:20px;
+    border-left :solid 5px orange;
+    border-right :solid 5px orange;
+    width:auto;
+    height:10%;
+    color:orange;
+    border-radius: 100px 100px 100px 100px;
+    border-bottom: solid 3px orange;
+    border-top: solid 3px orange;
+    box-shadow: 0 0 8px gray;
+    }
+}
+.BodyBox{
+    margin: 0px;
+    background: #ffffff;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 0 0 8px gray;
+}
+@media screen and (max-width: 1000px) {
+    .BodyBox{
+        background: #ffffff;
+        opacity: 0.9;
+        border-radius: 10px;
+        box-shadow: 0 0 8px gray;
+    }
+}
+
+
+.icon{
+    bottom:500;
+    width:20vw;
+    height:20vw;
+    border-left :solid 5px orange;
+    border-right :solid 5px orange;
+    border-radius: 100px 100px 100px 100px;
+    box-shadow: 0 0 8px gray;
+}
+.workTitle{
+    border-bottom: solid 3px orange;
+}
+.url{
+    color: black;
+}
+
+
+
+/* メニュー全体 */
+.menuPosition{
+    color: #898989;
+    
+}
+@media screen and (max-width: 1000px) {
+    .menuPosition{
+        position: absolute;
+         color: #898989;
+        
+        }
+}
+.menu {
+    width: 120px;
+    position: fixed;
+    z-index:20;
+    
+}
+@media screen and (max-width: 1000px) {
+    .menu {
+        font-size:10px;
+        width: 60px;
+        position:fixed;
+        z-index:20;
+    }
+}
+  
+  /* チェックボックスは非表示にする（内部的な Off/On の機能だけ利用する） */
+  .menu input {
+      display: none;
+  }
+  .menu li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .menu li a{
+        text-align: left;
+        text-decoration: none;
+        color: #333;
+      }
+}
+  
+  /* 開いた状態のサブメニュー */
+  .menu input:checked + ul {
+      display: block;
+      width: 88px;
+      
+  }
+  @media screen and (max-width: 1000px) {
+  .menu input:checked + ul {        
+    display: block;
+    width: 28px;
+  }
+}
+  
+  
+  /* 閉じた状態のサブメニュー */
+  .menu ul {
+      display: none;
+      /* 下記は開閉によらず共通の設定 */
+      background: #b5b5b5;
+      list-style: none;
+      margin: 0;
+      padding: 1rem;
+  }
+  
+  /* 親項目の装飾 */
+  .menu label {
+      display: block;
+      margin: 0;
+      padding: 0.5rem;
+      background: #1a1f28;
+      cursor: pointer;
+  }
+  @media screen and (max-width: 1000px) {  
+  .menu label {    
+    display: block;
+    margin: 0;
+    padding: 0.5rem;
+    background: #1a1f28;
+    cursor: pointer;
+    }   
+  }
+  .menu label:hover {background: #1a1f28;}
+  .menu li:hover {background: #1a1f28;}
+
+
+.homeLabel{text-align: center;}
+.workLabel{text-align: center;}
+.snsLabel{text-align: center;}
+
+.Phonetic{
+    text-align: center;
+    font-size:10px;
+}
+/*ボタン https://saruwakakun.com/html-css/reference/buttons#section2*/
+.square_btn{
+    display: inline-block;
+    padding: 3px 2px;
+	border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    background-image: #ffffff;
+    transition: .4s;
+    box-shadow: 0 0 8px gray;
+}
+/*テキストボックス https://coliss.com/articles/build-websites/operation/css/css3-form-styling-cheat-sheet.html*/
+.textbox{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+/*セレクタ https://www.willstyle.co.jp/blog/303/*/
+select{
+    outline:none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    background: none #ffffff;
+    vertical-align: middle;
+    font-size: inherit;
+    color: inherit;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+select option{
+  background-color: #fff;
+  color: #333;
+  
+}
+select::-ms-expand {
+  display: none;
+}
+select:-moz-focusring { 
+  color: transparent; 
+  text-shadow: 0 0 0 #828c9a;
+}
+/*sample 非表示 https://saruwakakun.com/html-css/reference/hidden-show*/
+/*全体*/
+.hidden_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+    
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    
+    display: inline-block;
+    padding: 3px 2px;
+	border-radius: 25px;
+    text-decoration: none;
+    border: solid 2px #7e7f80;        
+    background-image: #cacacc;
+
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+
+
+/*menu bar 非表示 https://saruwakakun.com/html-css/reference/hidden-show*/
+/*全体*/
+.hiddenMenuBar {
+    padding: 0;
+    box-shadow: 0 0 8px gray;
+}
+
+.hiddenMenuBar input {
+    display: none;
+}
+
+.hiddenMenuBar .hiddenMenuShow {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.hiddenMenuBar input:checked ~ .hiddenMenuShow {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+.hiddenMenuBar {
+    padding: 0;
+}
+
+.hiddenMenuBar label {
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+    
+}
+
+.hiddenMenuBar label:hover {
+    background: #efefef;
+}
+
+.hiddenMenuBar input {
+    display: none;
+}
+
+.hiddenMenuBar .hiddenMenuShow {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.hiddenMenuBar input:checked ~ .hiddenMenuShow {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+.openSourceCodeUrl{
+    font-size:20px;
+    border-left :solid 1px rgb(31, 31, 31);
+    border-right :solid 1px rgb(31, 31, 31);
+    color:orange;
+    border-radius: 100px 100px 100px 100px;
+    border-bottom: solid 1px rgb(31, 31, 31);
+    border-top: solid 1px rgb(31, 31, 31);
+    box-shadow: 0 0 8px gray;
+    
+}
+@media screen and (max-width: 1000px) {
+    .openSourceCodeUrl{
+        font-size:20px;
+        border-left :solid 1px rgb(31, 31, 31);
+        border-right :solid 1px rgb(31, 31, 31);
+        color:orange;
+        border-radius: 100px 100px 100px 100px;
+        border-bottom: solid 1px rgb(31, 31, 31);
+        border-top: solid 1px rgb(31, 31, 31);
+        box-shadow: 0 0 8px gray;
+        
+    }
+}
+.openSourceCode{
+    font-size:20px;
+    border-left :solid 1px rgb(31, 31, 31);
+    border-right :solid 1px rgb(31, 31, 31);
+    color:white;
+    border-radius: 10px 10px 10px 10px;
+    border-bottom: solid 1px rgb(31, 31, 31);
+    border-top: solid 1px rgb(31, 31, 31);
+    box-shadow: 0 0 8px gray;
+    background-image: linear-gradient(-90deg, #3B3B3B, #4A4A4A);
+    
+}
+@media screen and (max-width: 1000px) {
+    .openSourceCode{
+        font-size:20px;
+        border-left :solid 1px rgb(31, 31, 31);
+        border-right :solid 1px rgb(31, 31, 31);
+        color:white;
+        border-radius: 10px 10px 10px 10px;
+        border-bottom: solid 1px rgb(31, 31, 31);
+        border-top: solid 1px rgb(31, 31, 31);
+        box-shadow: 0 0 8px gray;
+        background-image: linear-gradient(-90deg, #3B3B3B, #4A4A4A);
+        
+    }
+}
+
+a:link { color: #b4b4b4; }
+a:visited { color: gray; }
+a:hover { color: gray; }
+a:active { color: gray; }
+

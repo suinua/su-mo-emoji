@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>あースーモ！！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+</head>
+
+<body class="body" align="center">
+    <h1 class="Title">あ！スーモ！！</h1>
+    <div class="BodyBox">
+        <select name="typeSelect" id="typeSelect">
+            <option value="emoji">emoji</option>
+            <option value="text">text</option>
+        </select>
+        <div id="emojiSelect">
+            目:
+            <input id="emoji_1" type="text" class "textbox" style="width: 40px" value="👁">
+            <br> 体:
+            <input id="emoji_2" type="text" class "textbox" style="width: 40px" value="🌳">
+        </div>
+        <div id="textSelect" style="display: none;">
+            <select name="fontType" id="fontType">
+                <option value="全角">全角</option>
+                <option value="半角">半角</option>
+            </select>
+            <br>
+            <textarea name="suumoTextBox" id="suumoTextBox" class="textbox" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <br>
+    <div id="resultContainer" style="font-family: 'Noto Sans', sans-serif;" class="BodyBox">
+        <div id="resultText">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌳🌳🌳
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;🌳🌳🌳🌳🌳🌳
+            <br> &nbsp;&nbsp;🌳🌳👁🌳🌳👁🌳🌳
+            <br> &nbsp;🌳🌳🌳🌳🌳🌳🌳🌳🌳
+            <br> &nbsp;🌳🌳🌳🌳🌳🌳🌳🌳🌳
+            <br> &nbsp;&nbsp;🌳🌳🌳🌳🌳🌳🌳🌳
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;🌳🌳🌳🌳🌳🌳
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌳🌳🌳🌳
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;」　」
+        </div>
+        <textarea name="copyTextContainer" id="copyTextContainer" cols="30" rows="10" style="display: none;"></textarea>
+        <input id="copyButton" type="button" class="square_btn" value="copyForNormal" onclick="clickedCopyButton(false)">
+        <br>
+        <input id="copyButton" type="button" class="square_btn" value="copyForTwitter " onclick="clickedCopyButton(true)">
+        <br>(ずれる場合はこっち)
+    </div>
+    <br>
+    <div class="openSourceCode">
+        <h3>View Source Code</h3>
+        <div class="openSourceCodeUrl">
+            <a href="https://github.com/suinua/suumo-emoji-art/tree/master/">open github</a>
+        </div>
+    </div>
+    </div>
+    <br>
+    <a href="https://twitter.com/suinua">twitter:@suinua</a>
+    <script>
+        function clickedCopyButton(ForTwiter) {
+            if (ForTwiter == true) {
+                execCopy(document.getElementById('resultText').textContent.split(String.fromCharCode(160)).join("  "))
+            } else {
+                execCopy(document.getElementById('resultText').textContent)
+            }
+        }
+        //https://qiita.com/simiraaaa/items/2e7478d72f365aa48356より引用
+        function execCopy(string) {
+            var temp = document.createElement('div');
+
+            temp.appendChild(document.createElement('pre')).textContent = string;
+
+            var s = temp.style;
+            s.position = 'fixed';
+            s.left = '-100%';
+
+            document.body.appendChild(temp);
+            document.getSelection().selectAllChildren(temp);
+
+            var result = document.execCommand('copy');
+
+            document.body.removeChild(temp);
+            // true なら実行できている falseなら失敗か対応していないか
+            return result;
+        }
+
+    </script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</body>
+
+</html>
