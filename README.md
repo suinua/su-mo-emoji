@@ -1,2 +1,2 @@
 # su-mo-emoji-art  
-url:https://suinua.github.io/suumo-emoji-art/web/index.html
+url:https://suinua.github.io/suumo-emoji/web/index.html
